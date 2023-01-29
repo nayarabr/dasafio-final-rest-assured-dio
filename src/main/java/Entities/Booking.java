@@ -2,8 +2,8 @@ package Entities;
 
 
 public class Booking {
-    private String lastname;
     private String firstname;
+    private String lastname;
     private float totalprice;
     private boolean depositpaid;
     private BookingDates bookingdates;
@@ -65,7 +65,5 @@ public class Booking {
     public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
-
-
 
 }

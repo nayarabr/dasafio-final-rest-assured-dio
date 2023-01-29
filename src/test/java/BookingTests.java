@@ -67,7 +67,7 @@ public class BookingTests {
     public void  getAllBookingsByUserFirstName_BookingExists_returnOk(){
                     request
                         .when()
-                            .queryParam("firstName", "Carol")
+                            .queryParam("firstName", "Nayara")
                             .get("/booking")
                         .then()
                             .assertThat()
@@ -95,6 +95,24 @@ public class BookingTests {
                         .contentType(ContentType.JSON).and().time(lessThan(2000L));
 
 
+
+    }
+
+    @Test
+    public void UpdatingBooking_WithValidData_returnOk(){
+
+        Booking test = booking;
+        given().config(RestAssured.config().logConfig(logConfig().enableLoggingOfRequestAndResponseIfValidationFails()))
+                .contentType(ContentType.JSON)
+                .when()
+                .body(booking)
+                .post("/booking")
+                .then()
+                .body(matchesJsonSchemaInClasspath("updateBookingRequestSchema.json"))
+                .and()
+                .assertThat()
+                .statusCode(200)
+                .contentType(ContentType.JSON).and().time(lessThan(2000L));
 
     }
 
