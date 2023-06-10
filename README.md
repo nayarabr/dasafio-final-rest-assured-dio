@@ -1,10 +1,9 @@
 # dasafio-final-rest-assured-dio
-Repositório de acompanhamento para projeto de automação de testes com RestAssured - Dio + GFT
+Repositório de acompanhamento para projeto de automação de testes com RestAssured - Dio
 
 Explorando o Rest Assured Para a Automação de Testes de API.
 
-
-Projeto incompleto!
+**Projeto incompleto!**
 
 Obrigatório:
 
